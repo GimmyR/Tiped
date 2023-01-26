@@ -2,7 +2,11 @@
 
 **Trello** est une application de Todolist géniale et ultra complète. Seul problème ? Ce n'est pas adapté aux caprices de la *JIRAMA*. C'est pour cette raison que j'ai décidé de développer **Tiped**, une alternative offline, très largement moins complète par rapport à **Trello** mais au moins lorsqu'il n'y a pas courant et donc pas de connexion, c'est toujours fonctionnel.
 
-## Prérequis
+## Télécharger l'application
+
+* Pour linux (x64) : [tiped-linux-x64](https://drive.google.com/file/d/1f40lA4QIAqbm6nC83YZw3arOhgrGjCN7/view?usp=share_link)
+
+## Prérequis pour les développeurs
 
 Il faut avoir d'installer :
 
