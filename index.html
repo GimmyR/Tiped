@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tiped</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="./assets/css/menu.css"/>
+    <link rel="stylesheet" href="./assets/css/board.css"/>
+    <link rel="stylesheet" href="./assets/css/task.css"/>
+  </head>
+  <body class="bg-secondary">
+    <!-- ######### MENU STARTS HERE ######### -->
+    <div>
+      <nav class="navbar bg-light menu-height fixed-top">
+          <div class="container-fluid px-2">
+              <div class="d-flex justify-content-start">
+                  <button onclick="newProject()" class="btn btn-outline-secondary me-2" title="New project">
+                      <i class="bi bi-file-earmark-plus"></i>
+                  </button>
+                  <button onclick="saveAs()" class="btn btn-outline-secondary me-2" title="Save as">
+                      <i class="bi bi-save2"></i>
+                  </button>
+                  <button onclick="openProject()" class="btn btn-outline-secondary" title="Open project">
+                      <i class="bi bi-folder2-open"></i>
+                  </button>
+              </div>
+          </div>
+      </nav>
+    </div>
+    <!-- ######### MENU ENDS HERE ######### -->
+
+    <!-- ######### BOARD STARTS HERE ######### -->
+    <div class="container-fluid p-0 d-flex align-items-start" ondragenter="handleDrag(event)" ondragover="handleDrag(event)" ondragleave="handleDrag(event)" ondrop="openProjectDrop(event)">
+      <div class="col-md-4 mt-5 p-3 vh-92">
+          <div class="border p-3 bg-light mh-100 overflow-auto">
+              <h1 class="text-center fs-5">
+                  <i class="bi bi-clipboard-fill"></i> To do
+              </h1>
+              <div id="to-do-list"></div>
+              <button onclick="addToDoTask()" type="button" class="btn btn-primary col-md-12" data-bs-toggle="modal" data-bs-target="#add-task-modal">
+                  <i class="bi bi-plus-lg"></i> Add a task
+              </button>
+          </div>
+      </div>
+      <div class="col-md-4 p-3 ps-1 pe-1 vh-92">
+          <div class="border mt-5 p-3 bg-light mh-100 overflow-auto">
+              <h1 class="text-center fs-5">
+                  <i class="bi bi-chat-square-dots-fill"></i> In Progress
+              </h1>
+              <div id="in-progress-list"></div>
+              <button onclick="addInProgressTask()" type="button" class="btn btn-primary col-md-12" data-bs-toggle="modal" data-bs-target="#add-task-modal">
+                  <i class="bi bi-plus-lg"></i> Add a task
+              </button>
+          </div>
+      </div>
+      <div class="col-md-4 p-3 vh-92">
+          <div class="border mt-5 p-3 bg-light mh-100 overflow-auto">
+              <h1 class="text-center fs-5">
+                  <i class="bi bi-check-circle-fill"></i> Done
+              </h1>
+              <div id="done-list"></div>
+              <button onclick="addDoneTask()" type="button" class="btn btn-primary col-md-12" data-bs-toggle="modal" data-bs-target="#add-task-modal">
+                  <i class="bi bi-plus-lg"></i> Add a task
+              </button>
+          </div>
+      </div>
+    </div>
+    <!-- ######### BOARD ENDS HERE ######### -->
+
+    <!-- ######### ADD TASK MODAL STARTS HERE ######### -->
+    <div class="modal fade" id="add-task-modal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="add-task-modal-label"></h1>
+                    <button onclick="initializeModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="add-task-modal-desc" class="form-control" placeholder="Edit description"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <input id="add-task-modal-bg-color" type="color" class="form-control form-control-color" value="#AAAAAA" title="Choose your color">
+                    <button type="button" class="btn btn-danger">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                    <button onclick="saveChanges()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ######### ADD TASK MODAL ENDS HERE ######### -->
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/board.js"></script>
+    <script src="./assets/js/modal.js"></script>
+  </body>
+</html>
