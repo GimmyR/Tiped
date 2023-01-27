@@ -5,7 +5,7 @@
 ## Télécharger l'application
 
 * Pour Windows (x64) : [tiped-win32-x64](https://drive.google.com/file/d/123oj2dHXHxGZ2PaNVT3wPnCMaGw8UlLm/view?usp=share_link)
-* Pour linux (x64) : [tiped-linux-x64](https://drive.google.com/file/d/1f40lA4QIAqbm6nC83YZw3arOhgrGjCN7/view?usp=share_link)
+* Pour linux (x64) : [tiped-linux-x64](https://drive.google.com/file/d/1bnt3gzcMDAR2iZEqf-_O3HCMz-atSHtR/view?usp=share_link)
 
 ## Prérequis pour les développeurs
 
