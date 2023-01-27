@@ -90,6 +90,7 @@ const addTaskOnView = function(i, j) {
         document.getElementById("add-task-modal-label").innerHTML = "Edit " + label[i] + " Task";
         document.getElementById("add-task-modal-desc").value = list[i][j].desc;
         document.getElementById("add-task-modal-bg-color").value = list[i][j].bgColor;
+        document.getElementById("add-task-modal-remove").style.display = "inline";
     });
 
     leftButton.addEventListener("click", function(event) {

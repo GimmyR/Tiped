@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/menu.css"/>
     <link rel="stylesheet" href="./assets/css/board.css"/>
     <link rel="stylesheet" href="./assets/css/task.css"/>
+    <link rel="stylesheet" href="./assets/css/modal.css"/>
   </head>
   <body class="bg-secondary">
     <!-- ######### MENU STARTS HERE ######### -->
@@ -81,7 +82,7 @@
                 </div>
                 <div class="modal-footer">
                     <input id="add-task-modal-bg-color" type="color" class="form-control form-control-color" value="#AAAAAA" title="Choose your color">
-                    <button type="button" class="btn btn-danger">
+                    <button onclick="remove()" id="add-task-modal-remove" type="button" class="btn btn-danger" data-bs-dismiss="modal">
                         <i class="bi bi-trash3"></i>
                     </button>
                     <button onclick="saveChanges()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>

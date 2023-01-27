@@ -12,9 +12,10 @@ const addTask = function() {
 const initializeModal = function() {
     selectedList = -1;
     selectedTask = -1;
-    document.getElementById("add-task-modal-desc").innerHTML = "";
+    document.getElementById("add-task-modal-label").innerHTML = "";
     document.getElementById("add-task-modal-desc").value = "";
     document.getElementById("add-task-modal-bg-color").value = "#AAAAAA";
+    document.getElementById("add-task-modal-remove").style.display = "none";
 }
 
 const editTask = function() {
@@ -33,4 +34,11 @@ const saveChanges = function() {
     else
         editTask();
     initializeModal();
+}
+
+const remove = function() {
+    if(selectedList >= 0 && selectedList < list.length && selectedTask >= 0 && selectedTask < list[selectedList].length) {
+        list[selectedList].splice(selectedTask, 1);
+        refreshTasksList();
+    }
 }
