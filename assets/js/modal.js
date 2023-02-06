@@ -40,5 +40,6 @@ const remove = function() {
     if(selectedList >= 0 && selectedList < list.length && selectedTask >= 0 && selectedTask < list[selectedList].length) {
         list[selectedList].splice(selectedTask, 1);
         refreshTasksList();
+        initializeModal();
     }
 }
